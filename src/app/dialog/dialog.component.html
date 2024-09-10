@@ -1,0 +1,28 @@
+<div class="dialog">
+
+        
+    <mat-form-field class="example-full-width">
+        <mat-label>Position</mat-label>
+            <input disabled="true" type="text" matInput [(ngModel)]="dialogPositionColumn" name="position">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+            <input type="text" matInput [(ngModel)]="dialogNameColumn" name="name">
+    </mat-form-field>
+
+        
+    <mat-form-field class="example-full-width">
+        <mat-label>Weight</mat-label>
+            <input type="text" matInput [(ngModel)]="dialogWeightColumn" name="weight">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Symbol</mat-label>
+            <input type="text" matInput [(ngModel)]="dialogSymbolColumn" name="symbol">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="onSubmit(); submitNotification()">Submit</button>
+            
+</div>
+  

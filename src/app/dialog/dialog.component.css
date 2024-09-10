@@ -1,0 +1,19 @@
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+  .dialog {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+  }
