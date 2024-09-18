@@ -1,28 +1,28 @@
 <div class="dialog">
-
-        
     <mat-form-field class="example-full-width">
-        <mat-label>Position</mat-label>
-            <input disabled="true" type="text" matInput [(ngModel)]="dialogPositionColumn" name="position">
+      <mat-label>Position</mat-label>
+      <input disabled="true" type="text" matInput [(ngModel)]="dialogPositionColumn" name="position">
     </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-        <mat-label>Name</mat-label>
-            <input type="text" matInput [(ngModel)]="dialogNameColumn" name="name">
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [formControl]="dialogNameColumn" type="text" name="name" placeholder="Enter name">
+      <mat-error *ngIf="dialogNameColumn.hasError('pattern')">Only alphabets are allowed</mat-error>
     </mat-form-field>
-
-        
-    <mat-form-field class="example-full-width">
-        <mat-label>Weight</mat-label>
-            <input type="text" matInput [(ngModel)]="dialogWeightColumn" name="weight">
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Weight</mat-label>
+      <input matInput [formControl]="dialogWeightColumn" type="text" name="weight" placeholder="Enter weight">
+      <mat-error *ngIf="dialogWeightColumn.hasError('pattern')">Only numbers and decimals are allowed</mat-error>
     </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-        <mat-label>Symbol</mat-label>
-            <input type="text" matInput [(ngModel)]="dialogSymbolColumn" name="symbol">
+  
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Symbol</mat-label>
+      <input matInput [formControl]="dialogSymbolColumn" type="text" name="symbol" placeholder="Enter symbol">
+      <mat-error *ngIf="dialogSymbolColumn.hasError('pattern')">Only alphanumeric characters are allowed</mat-error>
     </mat-form-field>
-
-    <button mat-raised-button (click)="onSubmit(); submitNotification()">Submit</button>
-            
-</div>
+  
+    <button mat-raised-button color="primary" (click)="onSubmit();">Submit</button>
+    
+  </div>
   
